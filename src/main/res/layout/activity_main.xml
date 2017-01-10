@@ -1,0 +1,223 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+android:background="@drawable/layout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="gpsuploader.source.MainActivity">
+
+    <TextView
+        android:text="@string/gpstext"
+        android:layout_width = "match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textview"
+        android:textStyle="bold"
+        android:textSize="28sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:singleLine="false"
+        android:background="#070707"
+        android:textColor="#f8fdff"
+
+        android:focusable="false"
+        android:gravity="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/textView1"
+        android:layout_marginTop="31dp"
+        android:text=" LATITUDE:"
+        android:textSize="22sp"
+        android:layout_below="@+id/textview"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/textView2"
+        android:layout_alignEnd="@+id/textView2"
+        android:gravity="right"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text=" LONGITUDE:"
+        android:id="@+id/textView2"
+        android:textSize="22sp"
+        android:layout_below="@+id/textView1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="21dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="230px"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/LatView"
+        android:layout_alignTop="@+id/textView1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="230px"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/LongView"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_alignRight="@+id/LatView"
+        android:layout_alignEnd="@+id/LatView"
+        android:textStyle="bold"
+        android:layout_alignLeft="@+id/LatView"
+        android:layout_alignStart="@+id/LatView" />
+
+    <Button
+        android:layout_width="250px"
+        android:layout_height="wrap_content"
+        android:text="SCAN"
+        android:id="@+id/ebutton"
+        android:layout_above="@+id/ubutton"
+        android:layout_toLeftOf="@+id/LongView"
+        android:textColor="#070707" />
+
+    <Button
+        android:layout_width="200px"
+        android:layout_height="wrap_content"
+        android:text="DISABLE"
+        android:id="@+id/dbutton"
+        android:layout_alignTop="@+id/ebutton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:clickable="false"
+        android:textColor="#070707" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="UPLOAD GPS"
+        android:id="@+id/ubutton"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#070707" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/statusview"
+        android:gravity="center"
+        android:background="#070707"
+        android:textColor="#78fffd"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="  STATUS:"
+        android:id="@+id/textView3"
+        android:layout_above="@+id/statusview"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/ministatus"
+        android:textColor="#c60f35"
+        android:layout_above="@+id/statusview"
+        android:layout_alignRight="@+id/statusview"
+        android:layout_alignEnd="@+id/statusview"
+        android:layout_alignLeft="@+id/ubutton"
+        android:layout_alignStart="@+id/ubutton" />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pb"
+        android:layout_alignTop="@+id/statusview"
+        android:layout_alignBottom="@+id/statusview"
+        android:layout_alignRight="@+id/statusview"
+        android:layout_alignEnd="@+id/statusview" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="SCAN OPTIONS:"
+        android:id="@+id/textView"
+        android:layout_below="@+id/statusview"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:weightSum="1"
+        android:id="@+id/radioGroup"
+        android:layout_alignRight="@+id/dbutton"
+        android:layout_alignEnd="@+id/dbutton">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GPS MODULE      "
+            android:id="@+id/gpsbut"
+            android:checked="true"
+            android:layout_below="@+id/textView"
+            android:layout_toRightOf="@+id/ebutton"
+            android:textColor="#070707" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NETWORK"
+            android:id="@+id/netbut"
+            android:checked="false"
+            android:layout_alignTop="@+id/radioGroup"
+            android:layout_toRightOf="@+id/radioGroup"
+            android:textColor="#070707" />
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="  :NOTE"
+        android:id="@+id/textView4"
+        android:textStyle="bold|italic"
+        android:textColor="#ff8312"
+        android:layout_below="@+id/radioGroup"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/status3"
+        android:textSize="15sp"
+        android:textStyle="italic"
+        android:gravity="left|right"
+        android:layout_below="@+id/textView4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/dbutton"
+        android:layout_alignEnd="@+id/dbutton"
+        android:textColor="#070707"
+        android:textIsSelectable="false" />
+
+</RelativeLayout>

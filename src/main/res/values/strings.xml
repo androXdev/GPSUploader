@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Gps Uploader</string>
+    <string name="gpstext">  GPS Coordinates  </string>
+    <string name="action_settings">Settings</string>
+
+</resources>
